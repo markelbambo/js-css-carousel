@@ -1,0 +1,262 @@
+<html lang="en" class=" js csstransforms3d js csstransforms3d"><head>
+  <meta charset="utf-8">
+  
+  <!-- disable zooming -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0">
+  
+  <title>Carousel 2 - dynamic · Intro to CSS 3D transforms › Examples</title>
+  
+  <link rel="stylesheet" href="styles.css" media="screen">
+
+
+    <style media="screen">
+
+    .container {
+      width: 210px;
+      height: 140px;
+      position: relative;
+      margin: 0 auto 40px;
+      -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+    }
+
+
+    #carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+    }
+
+    .ready #carousel {
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #carousel.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #carousel figure {
+	font-family: 'PT Sans', arial, serif;
+	border-bottom: 3px solid rgba(0,0,0,0.5);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: rgba(0,0,0,0.25);
+	-o-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow inset 0 1px rgba(255,255,255,0.3), /* Top light Line inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+
+      display: block;
+      position: absolute;
+      width: 400px;
+      height: 330px;
+      left: 50px;
+      top: 50px;
+      border: 2px solid black;
+      line-height: 116px;
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+
+    }
+
+    .ready #carousel figure {
+    	-webkit-transition: opacity 1s, -webkit-transform 1s;
+    	-moz-transition: opacity 1s, -moz-transform 1s;
+        -o-transition: opacity 1s, -o-transform 1s;
+        transition: opacity 1s, transform 1s;
+    }
+
+  </style>
+
+</head>
+<body class=" ready">
+<h1>Carousel 2 - dynamic</h1>
+<section class="container">
+	<div id="carousel" style="-webkit-transform: translateZ(-697px) rotateY(-2039.9999999999982deg);">
+    	<figure style="opacity: 1; background-color: rgba(255, 0, 0, 0.8); -webkit-transform: rotateY(0deg) translateZ(697px);">1</figure>
+      	<figure style="opacity: 1; background-color: rgba(255, 72, 0, 0.8); -webkit-transform: rotateY(17.142857142857142deg) translateZ(697px);">2</figure>
+      	<figure style="opacity: 1; background-color: rgba(255, 145, 0, 0.8); -webkit-transform: rotateY(34.285714285714285deg) translateZ(697px);">3</figure>
+      	<figure style="opacity: 1; background-color: rgba(255, 217, 0, 0.8); -webkit-transform: rotateY(51.42857142857143deg) translateZ(697px);">4</figure>
+      	<figure style="opacity: 1; background-color: rgba(221, 255, 0, 0.8); -webkit-transform: rotateY(68.57142857142857deg) translateZ(697px);">5</figure>
+      	<figure style="opacity: 1; background-color: rgba(149, 255, 0, 0.8); -webkit-transform: rotateY(85.71428571428571deg) translateZ(697px);">6</figure>
+      	<figure style="opacity: 1; background-color: rgba(76, 255, 0, 0.8); -webkit-transform: rotateY(102.85714285714286deg) translateZ(697px);">7</figure>
+      	<figure style="opacity: 1; background-color: rgba(0, 255, 0, 0.8); -webkit-transform: rotateY(120deg) translateZ(697px);">8</figure>
+      	<figure style="opacity: 1; background-color: rgba(0, 255, 72, 0.8); -webkit-transform: rotateY(137.14285714285714deg) translateZ(697px);">9</figure>
+      	<figure style="opacity: 1; -webkit-transform: rotateY(240deg) translateZ(697px); background-color: rgba(0, 0, 255, 0.8);">
+      		<div style="width: 200px; height: 120px; left: 50px; top: 50px; line-height: 13px;  font-size: 12px;  font-weight: normal; color: white; ">
+				<table style="text-align:left;min-width: 350px;">
+					<tr><th>ID</th><td>12097</td></tr>
+					<tr><th>HostName</th><td>obs-asr25</td></tr>
+					<tr><th>Mgmt. Ip</th><td>1.6.50.25</td></tr>
+					<tr><th>Console IP</th><td>obs-cs2:2005</td></tr>
+					<tr><th>Manufacturer</th><td>Cisco</td></tr>
+					<tr><th>Model</th><td>ASR1004</td></tr>
+					<tr><th>Status</th><td>Available</td></tr>
+					<tr><th>User</th><td></td></tr>
+					<tr><th>Remaining time</th><td></td></tr>
+					<tr><th>Av Ports</th><td>0/6/4</td></tr>
+					<tr><th>Connectivity</th><td>L1/L2/Open</td></tr>
+				</table>
+			</div>
+		</figure>
+	</div>
+</section>
+
+<section id="options">
+	<p>
+    	<label for="panel-count">panels</label>
+      	<input type="range" id="panel-count" value="3" min="3" max="10">
+    	<span class=" range-display"></span><span class=" range-display"></span>
+    </p>
+    
+    <p id="navigation">
+    	<button id="previous" data-increment="-1">Previous</button>
+    	<button id="next" data-increment="1">Next</button>
+    </p>
+	<button id="addNewElement"></button>
+    <p>
+    	<button id="toggle-axis">Toggle Carousel Axis</button>
+    </p>
+
+    <p>
+    	<button id="toggle-backface-visibility">Toggle Backface Visibility</button>
+    </p>
+  </section>
+
+  <script src="utils.js"></script>
+  <script>
+    var transformProp = Modernizr.prefixed('transform');
+
+    function Carousel3D ( el ) {
+      this.element = el;
+      this.rotation = 0;
+      this.panelCount = 0;
+      this.totalPanelCount = this.element.children.length;
+      this.theta = 0;
+
+      this.isHorizontal = true;
+
+    }
+
+    Carousel3D.prototype.modify = function() {
+      var panel, angle, i;
+
+      this.panelSize = this.element[ this.isHorizontal ? 'offsetWidth' : 'offsetHeight' ];
+      this.rotateFn = this.isHorizontal ? 'rotateY' : 'rotateX';
+      this.theta = 360 / this.panelCount;
+
+      // do some trig to figure out how big the carousel
+      // is in 3D space
+      this.radius = Math.round( ( this.panelSize / 2) / Math.tan( Math.PI / this.panelCount ) );
+
+      for ( i = 0; i < this.panelCount; i++ ) {
+        panel = this.element.children[i];
+        angle = this.theta * i;
+        panel.style.opacity = 1;
+        panel.style.backgroundColor = 'hsla(' + angle + ', 100%, 50%, 0.8)';
+        // rotate panel, then push it out in 3D space
+		console.log("panelcnt=="+this.panelCount);
+		if(this.panelCount > 2){
+        	panel.style[ transformProp ] = this.rotateFn + '(' + angle + 'deg) translateZ(' + this.radius + 'px)';
+		}else{
+			panel.style[ transformProp ] =	'none';
+		}
+      }
+
+      // hide other panels
+      for (  ; i < this.totalPanelCount; i++ ) {
+        panel = this.element.children[i];
+        panel.style.opacity = 0;
+        panel.style[ transformProp ] = 'none';
+      }
+
+      // adjust rotation so panels are always flat
+      this.rotation = Math.round( this.rotation / this.theta ) * this.theta;
+
+      this.transform();
+
+    };
+
+    Carousel3D.prototype.transform = function() {
+      // push the carousel back in 3D space,
+      // and rotate it
+      this.element.style[ transformProp ] = 'translateZ(-' + this.radius + 'px) ' + this.rotateFn + '(' + this.rotation + 'deg)';
+    };
+
+    var init = function() {
+      var carousel = new Carousel3D( document.getElementById('carousel') ),
+      panelCountInput = document.getElementById('panel-count'),
+	  panelCtr = parseInt(document.getElementById('panel-count').max),
+      axisButton = document.getElementById('toggle-axis'),
+      navButtons = document.querySelectorAll('#navigation button'),
+	  addBtn = document.getElementById('addNewElement'),
+
+      onNavButtonClick = function( event ){
+      	var increment = parseInt( event.target.getAttribute('data-increment') );
+        carousel.rotation += carousel.theta * increment * -1;
+        carousel.transform();
+    	};
+
+      // populate on startup
+      carousel.panelCount = parseInt( panelCountInput.value, 10);
+      carousel.modify();
+
+	addBtn.addEventListener('click', function(){
+		panelCtr = parseInt(panelCtr)+1;
+		console.log('panelCtr='+panelCtr);
+		var div = document.getElementById('carousel');
+		div.innerHTML = div.innerHTML + '<figure style="opacity: 0; -webkit-transform: none;">'+panelCtr+'</figure>';
+		panelCountInput.max = panelCtr;
+		carousel.modify();
+	},false);
+      axisButton.addEventListener( 'click', function(){
+        carousel.isHorizontal = !carousel.isHorizontal;
+        carousel.modify();
+      }, false);
+
+      panelCountInput.addEventListener( 'change', function( event ) {
+        carousel.panelCount = event.target.value;
+        carousel.modify();
+      }, false);
+
+      for (var i=0; i < 2; i++) {
+        navButtons[i].addEventListener( 'click', onNavButtonClick, false);
+      }
+
+      document.getElementById('toggle-backface-visibility').addEventListener( 'click', function(){
+        carousel.element.toggleClassName('panels-backface-invisible');
+      }, false);
+
+      setTimeout( function(){
+        document.body.addClassName('ready');
+      }, 0);
+
+    };
+
+    window.addEventListener( 'DOMContentLoaded', init, false);
+  </script>
+
+  
+  <footer>
+    <p id="disclaimer">Sorry, your browser does not support CSS 3D transforms. Try viewing this page in <a href="http://www.apple.com/safari/">Safari</a>, <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/channel/">Firefox Aurora</a>, or on an iOS device.</p>
+    <p>Example for <a href="../">Intro to CSS 3D transforms</a> by David DeSandro</p>
+  </footer>
+
+
+
+</body></html>
